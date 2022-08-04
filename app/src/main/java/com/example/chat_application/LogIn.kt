@@ -16,7 +16,6 @@ class LogIn : AppCompatActivity() {
     private lateinit var edtPassword : EditText
     private lateinit var btLogin : Button
     private lateinit var btSignUp : Button
-
     private lateinit var mAuth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +29,6 @@ class LogIn : AppCompatActivity() {
         btLogin = findViewById(R.id.loginButton)
         btSignUp = findViewById(R.id.signupButton)
 
-        supportActionBar?.hide()
 
         btSignUp.setOnClickListener {
             val intent = Intent(this,SignUp::class.java)

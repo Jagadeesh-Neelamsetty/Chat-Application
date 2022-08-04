@@ -27,9 +27,13 @@
         android:background="@drawable/bg_edit_text"
         android:hint="Enter the email"
         android:paddingStart="20dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:inputType="textEmailAddress"
+        />
+
 
     <EditText
         android:id="@+id/loginPassword"
@@ -38,10 +42,13 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_edit_text"
         android:hint="Password"
+        android:inputType="textPassword"
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginEmail" />
+        app:layout_constraintTop_toBottomOf="@id/loginEmail"
+        tools:ignore="Deprecated"
+        />
 
     <Button
         android:id="@+id/loginButton"

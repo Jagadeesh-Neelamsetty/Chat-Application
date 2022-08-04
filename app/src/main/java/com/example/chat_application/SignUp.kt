@@ -31,24 +31,28 @@ class SignUp : AppCompatActivity() {
         edtConfirmPassword = findViewById(R.id.confirmPassword)
         btSignUp = findViewById(R.id.signupButton)
 
+        supportActionBar?.hide()
+
         btSignUp.setOnClickListener {
+            val name = edtName.text.toString()
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
             val confirmPassword = edtConfirmPassword.text.toString()
             if(password == confirmPassword) {
-                signUp(email, password)
+                signUp(name,email, password)
             }else{
                 Toast.makeText(this@SignUp,"Passwords does not match!",Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun signUp(email: String, password: String){
+    private fun signUp(name : String,email: String, password: String){
         //Logic for creating new user
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
+                        addUserToDatabase(name,email,mAuth.currentUser?.uid!!)
                         Log.d(TAG,"User creation : SUCCESS")
                         val intent = Intent(this@SignUp, MainActivity::class.java)
 
@@ -59,6 +63,9 @@ class SignUp : AppCompatActivity() {
                     Toast.makeText(this@SignUp,"Some error occurred! Please try after sometime.",Toast.LENGTH_SHORT).show()
                 }
             }
+
+    }
+    private fun addUserToDatabase(name: String,email: String,uid : String){
 
     }
 }

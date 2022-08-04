@@ -6,8 +6,9 @@
         <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/drawable/bg_button.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/drawable/bg_edit_text.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_log_in.xml" value="0.1" />
-        <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_main.xml" value="0.1703125" />
+        <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.184375" />
+        <entry key="..\:/Users/Jagadeesh/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/user_layout.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -16,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
