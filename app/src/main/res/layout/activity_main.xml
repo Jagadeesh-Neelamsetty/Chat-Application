@@ -10,6 +10,15 @@
         android:id="@+id/userRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:contentDescription="@layout/user_layout"
         tools:listitem="@layout/user_layout"/>
+
+<!--    <TextView-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="Hi"-->
+<!--        android:textSize="30dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

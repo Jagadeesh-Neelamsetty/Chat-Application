@@ -1,6 +1,9 @@
 package com.example.chat_application
 
+import android.content.ContentValues.TAG
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +20,13 @@ class UserAdapter(val context : Context,val userList : ArrayList<User>): Recycle
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val currentUser = userList[position]
         holder.textName.text = currentUser.name
+        Log.d(TAG,"chandana")
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context,ChatActivity::class.java)
+            intent.putExtra("Name",currentUser.name)
+            intent.putExtra("Uid",currentUser.uid)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

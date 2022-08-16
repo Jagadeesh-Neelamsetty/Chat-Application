@@ -26,6 +26,7 @@
     android:layout_marginTop="10dp"
     android:background="@drawable/bg_edit_text"
     android:hint="Name"
+    android:inputType="text"
     android:paddingStart="10dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +40,7 @@
     android:background="@drawable/bg_edit_text"
     android:hint="Enter the email"
     android:paddingStart="10dp"
+    android:inputType="textEmailAddress"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/name" />
@@ -51,6 +53,7 @@
         android:background="@drawable/bg_edit_text"
         android:hint="Enter the password"
         android:paddingStart="10dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email" />
@@ -63,6 +66,7 @@
         android:background="@drawable/bg_edit_text"
         android:hint="Re-enter the password"
         android:paddingStart="10dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signUpPassword" />

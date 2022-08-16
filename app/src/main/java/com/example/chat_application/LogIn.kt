@@ -29,6 +29,7 @@ class LogIn : AppCompatActivity() {
         btLogin = findViewById(R.id.loginButton)
         btSignUp = findViewById(R.id.signupButton)
 
+        supportActionBar?.hide()
 
         btSignUp.setOnClickListener {
             val intent = Intent(this,SignUp::class.java)
@@ -50,15 +51,19 @@ class LogIn : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "LoginWithEmail:success")
-                    val intent = Intent(this@LogIn,MainActivity::class.java)
+                    val intent = Intent(this@LogIn, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "LoginWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "User does not exist or the password you've entered is incorrect.",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this, "User does not exist or the password you've entered is incorrect.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+
     }
 
 }

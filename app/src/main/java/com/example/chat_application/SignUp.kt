@@ -8,6 +8,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUp : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class SignUp : AppCompatActivity() {
     private lateinit var edtPassword : EditText
     private  lateinit var edtConfirmPassword : EditText
     private lateinit var btSignUp : Button
+    private lateinit var mDbRef : DatabaseReference
 
     private lateinit var mAuth : FirebaseAuth
 
@@ -66,6 +69,9 @@ class SignUp : AppCompatActivity() {
 
     }
     private fun addUserToDatabase(name: String,email: String,uid : String){
+
+        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef.child("User").child(uid).setValue(User(name,email,uid))
 
     }
 }
